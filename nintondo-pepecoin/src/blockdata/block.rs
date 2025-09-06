@@ -190,7 +190,7 @@ impl Header {
         BlockHash::from_engine(engine)
     }
 
-    fn drop_auxpow(&self) -> HeaderWithoutAuxPow {
+    pub fn drop_auxpow(&self) -> HeaderWithoutAuxPow {
         HeaderWithoutAuxPow {
             version: self.version,
             prev_blockhash: self.prev_blockhash,
